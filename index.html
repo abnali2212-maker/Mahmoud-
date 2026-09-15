@@ -3,614 +3,549 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>دعوة عقيقة ليل 🤍</title>
+<title>دعوة عقيقة ليل</title>
 
 <style>
 *{
-  box-sizing:border-box;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  background:#f5ebe5;
-  color:#65494b;
-  font-family:Tahoma, Arial, sans-serif;
+    margin:0;
+    background:#f5ebe5;
+    color:#65494b;
+    font-family:Tahoma,Arial,sans-serif;
 }
 
-/* =========================
-   الغلاف الأول
-========================= */
-
+/* شاشة البداية */
 .cover{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  overflow:hidden;
-  background:#f5ebe5;
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    background:#f5ebe5;
 }
 
 .cover-image{
-  width:100%;
-  height:100vh;
-  max-width:520px;
-  object-fit:cover;
-  display:block;
+    width:100%;
+    height:100vh;
+    max-width:520px;
+    object-fit:cover;
+    display:block;
 }
-
-/* زر افتح الدعوة */
 
 .open-btn{
-  position:absolute;
-  bottom:9%;
-  left:50%;
-  transform:translateX(-50%);
-
-  width:72%;
-  max-width:330px;
-
-  padding:17px 20px;
-
-  border:none;
-  border-radius:50px;
-
-  background:#a9787d;
-  color:white;
-
-  font-size:21px;
-  font-weight:bold;
-
-  box-shadow:0 8px 22px rgba(80,50,63,.25);
-
-  cursor:pointer;
-
-  transition:.3s;
-}
-
-.open-btn:hover{
-  transform:translateX(-50%) scale(1.03);
+    position:absolute;
+    bottom:9%;
+    left:50%;
+    transform:translateX(-50%);
+    width:72%;
+    max-width:330px;
+    padding:17px 20px;
+    border:0;
+    border-radius:50px;
+    background:#a9787d;
+    color:#fff;
+    font-size:21px;
+    font-weight:bold;
+    box-shadow:0 8px 22px rgba(80,50,63,.25);
+    cursor:pointer;
+    z-index:5;
+    transition:.25s;
 }
 
 .open-btn:active{
-  transform:translateX(-50%) scale(.97);
+    transform:translateX(-50%) scale(.97);
 }
 
-
-/* =========================
-   صفحة الدعوة
-========================= */
-
+/* صفحة الدعوة */
 .invitation{
-  display:none;
-
-  width:100%;
-  max-width:520px;
-
-  min-height:100vh;
-
-  margin:auto;
-
-  padding:45px 20px 60px;
-
-  text-align:center;
-
-  background:
-    linear-gradient(
-      to bottom,
-      #fffaf7,
-      #f7ebe6
-    );
+    display:none;
+    width:100%;
+    max-width:520px;
+    min-height:100vh;
+    margin:auto;
+    padding:40px 20px 60px;
+    text-align:center;
+    background:linear-gradient(#fffaf7,#f7ebe6);
 }
 
 .invitation.show{
-  display:block;
-  animation:fadeIn .8s ease;
+    display:block;
+    animation:fadeIn .7s ease;
 }
 
 @keyframes fadeIn{
-  from{
-    opacity:0;
-    transform:translateY(25px);
-  }
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
 
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-
-/* =========================
-   العنوان
-========================= */
-
 .ornament{
-  font-size:23px;
-  margin-bottom:15px;
-  color:#8b6267;
+    font-size:22px;
+    margin-bottom:14px;
+    color:#8b6267;
 }
 
 h1{
-  margin:0;
-
-  font-size:40px;
-
-  color:#8b6267;
-
-  font-weight:bold;
+    margin:0;
+    font-size:40px;
+    color:#8b6267;
 }
 
 .subtitle{
-  margin:8px 0 28px;
-
-  font-size:18px;
-
-  color:#76575a;
+    margin:8px 0 25px;
+    font-size:18px;
 }
-
-
-/* =========================
-   الترحيب
-========================= */
 
 .welcome{
-  margin:25px 0 22px;
-
-  font-size:20px;
-
-  line-height:1.9;
-
-  font-weight:bold;
-
-  color:#8b6267;
+    margin:25px 0 20px;
+    font-size:20px;
+    line-height:1.9;
+    font-weight:bold;
+    color:#8b6267;
 }
 
-
-/* =========================
-   الكروت
-========================= */
-
 .box{
-  background:rgba(255,255,255,.82);
+    background:rgba(255,255,255,.82);
+    border-radius:22px;
+    padding:20px 18px;
+    margin:15px 0;
+    box-shadow:0 6px 20px rgba(90,60,55,.08);
+}
 
-  border-radius:22px;
+.quran{
+    line-height:2.2;
+    font-size:17px;
+}
 
-  padding:20px 18px;
-
-  margin:15px 0;
-
-  box-shadow:
-    0 6px 20px rgba(90,60,55,.08);
+.dua{
+    font-size:18px;
+    line-height:2;
+    font-weight:bold;
 }
 
 .label{
-  font-size:13px;
-
-  color:#9a7c7e;
-
-  margin-bottom:7px;
+    font-size:13px;
+    color:#9a7c7e;
+    margin-bottom:7px;
 }
 
 .value{
-  font-size:20px;
-
-  line-height:1.8;
-
-  font-weight:bold;
-
-  color:#65494b;
+    font-size:20px;
+    line-height:1.8;
+    font-weight:bold;
 }
 
-
-/* =========================
-   القرآن
-========================= */
-
-.quran{
-  line-height:2.2;
-
-  font-size:17px;
-
-  color:#65494b;
-}
-
-
-/* =========================
-   العد التنازلي
-========================= */
-
+/* العد التنازلي */
 .count-title{
-  margin-top:28px;
-
-  margin-bottom:15px;
-
-  color:#8b6267;
-
-  font-size:18px;
-
-  font-weight:bold;
+    margin-bottom:15px;
+    color:#8b6267;
+    font-size:19px;
+    font-weight:bold;
 }
 
 .countdown{
-  display:flex;
-
-  justify-content:center;
-
-  gap:8px;
-
-  direction:rtl;
-
-  margin-top:10px;
-
-  flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    gap:8px;
+    direction:rtl;
+    flex-wrap:wrap;
 }
 
 .count-item{
-  background:#fdf3f0;
-
-  border-radius:15px;
-
-  padding:12px 8px;
-
-  min-width:68px;
-
-  box-shadow:
-    0 3px 10px rgba(90,60,55,.08);
+    background:#fdf3f0;
+    border-radius:15px;
+    padding:12px 7px;
+    min-width:68px;
+    box-shadow:0 3px 10px rgba(90,60,55,.08);
 }
 
 .count-num{
-  font-size:24px;
-
-  font-weight:bold;
-
-  color:#8b6267;
-
-  line-height:1.1;
+    font-size:24px;
+    font-weight:bold;
+    color:#8b6267;
+    line-height:1.1;
 }
 
 .count-label{
-  font-size:11px;
-
-  color:#9a7c7e;
-
-  margin-top:5px;
+    font-size:11px;
+    color:#9a7c7e;
+    margin-top:5px;
 }
 
-
-/* =========================
-   زر العودة
-========================= */
-
-.back-btn{
-  margin-top:25px;
-
-  border:1px solid #c6a5a7;
-
-  background:transparent;
-
-  color:#8b6267;
-
-  border-radius:30px;
-
-  padding:11px 25px;
-
-  font-size:15px;
-
-  cursor:pointer;
-}
-
-
-/* =========================
-   زر الموسيقى
-========================= */
-
+/* زر الموسيقى */
 .music-button{
-  position:fixed;
-
-  bottom:18px;
-  left:18px;
-
-  width:48px;
-  height:48px;
-
-  border:none;
-
-  border-radius:50%;
-
-  background:#a9787d;
-
-  color:white;
-
-  font-size:20px;
-
-  box-shadow:0 5px 15px rgba(80,50,63,.25);
-
-  cursor:pointer;
-
-  display:none;
-
-  z-index:1000;
+    position:fixed;
+    bottom:18px;
+    left:18px;
+    width:48px;
+    height:48px;
+    border:0;
+    border-radius:50%;
+    background:#a9787d;
+    color:#fff;
+    font-size:20px;
+    box-shadow:0 5px 15px rgba(80,50,63,.25);
+    cursor:pointer;
+    display:none;
+    z-index:1000;
 }
 
 .music-button.show{
-  display:block;
+    display:block;
 }
 
+.back-btn{
+    margin-top:25px;
+    border:1px solid #c6a5a7;
+    background:transparent;
+    color:#8b6267;
+    border-radius:30px;
+    padding:11px 25px;
+    font-size:15px;
+    cursor:pointer;
+}
 
-/* =========================
-   موبايل
-========================= */
-
+/* للموبايل */
 @media(max-width:380px){
 
-  .open-btn{
-    font-size:19px;
-    padding:15px;
-  }
+    .open-btn{
+        font-size:19px;
+        padding:15px;
+    }
 
-  h1{
-    font-size:34px;
-  }
+    h1{
+        font-size:34px;
+    }
 
-  .welcome{
-    font-size:18px;
-  }
+    .welcome{
+        font-size:18px;
+    }
 
-  .count-item{
-    min-width:60px;
-  }
+    .count-item{
+        min-width:61px;
+    }
 
-  .count-num{
-    font-size:21px;
-  }
+    .count-num{
+        font-size:21px;
+    }
 }
 </style>
 </head>
 
-
 <body>
 
-
 <!-- =========================
-     الغلاف
+     الصورة الأولى
+     اسمها invite-1.png
 ========================= -->
 
 <section class="cover" id="cover">
 
-  <img
-    class="cover-image"
-    src="invitation.png"
-    alt="دعوة عقيقة ليل"
-  >
+    <img
+        class="cover-image"
+        src="./invite-1.png"
+        alt="دعوة عقيقة ليل"
+    >
 
-  <button
-    class="open-btn"
-    onclick="openInvitation()"
-  >
-    افتح الدعوة
-  </button>
+    <button
+        class="open-btn"
+        onclick="openInvitation()"
+    >
+        افتح الدعوة
+    </button>
 
 </section>
 
 
 <!-- =========================
-     صفحة الدعوة
+     محتوى الدعوة
 ========================= -->
 
 <main class="invitation" id="invitation">
 
-  <div class="ornament">
-    ⚜️ بسم الله الرحمن الرحيم ⚜️
-  </div>
+    <div class="ornament">
+        ⚜️ بسم الله الرحمن الرحيم ⚜️
+    </div>
+
+    <h1>
+        ليل 🤍
+    </h1>
+
+    <div class="subtitle">
+        دعوة عقيقة
+    </div>
+
+    <div class="welcome">
+        بسم الله ما شاء الله
+        <br>
+        فرحتنا بعقيقتنا تكتمل بوجودكم 🤍
+    </div>
 
 
-  <h1>
-    ليل 🤍
-  </h1>
+    <!-- الآية -->
 
+    <div class="box">
 
-  <div class="subtitle">
-    دعوة عقيقة
-  </div>
+        <div class="quran">
 
+            ﴿ الْمَالُ وَالْبَنُونَ زِينَةُ الْحَيَاةِ الدُّنْيَا
+            وَالْبَاقِيَاتُ الصَّالِحَاتُ خَيْرٌ عِندَ رَبِّكَ
+            ثَوَابًا وَخَيْرٌ أَمَلًا ﴾
 
-  <div class="welcome">
-    بسم الله ما شاء الله،<br>
-    فرحتنا بعقيقتنا تكتمل بوجودكم 🤍
-  </div>
-
-
-  <!-- القرآن -->
-
-  <div class="box">
-
-    <div class="quran">
-
-      ﴿ الْمَالُ وَالْبَنُونَ زِينَةُ الْحَيَاةِ الدُّنْيَا
-      وَالْبَاقِيَاتُ الصَّالِحَاتُ خَيْرٌ عِندَ رَبِّكَ
-      ثَوَابًا وَخَيْرٌ أَمَلًا ﴾
+        </div>
 
     </div>
 
-  </div>
 
+    <!-- الدعاء -->
 
-  <!-- الدعاء -->
+    <div class="box">
 
-  <div class="box">
+        <div class="dua">
 
-    <div class="value">
+            اللهم أنبته نباتًا حسنًا 🤲🏻
 
-      اللهم أنبته نباتًا حسنًا 🤲🏻
+            <br><br>
 
-      <br><br>
+            واجعله من الصالحين الذاكرين الحافظين لكتاب الله
+            والبار بوالديه، واجعله من السعداء في الدنيا والآخرة
 
-      واجعله من الصالحين الذاكرين الحافظين
-      لكتاب الله، والبار بوالديه،
-      واجعله من السعداء في الدنيا والآخرة 🤍
-
-    </div>
-
-  </div>
-
-
-  <!-- التاريخ -->
-
-  <div class="box">
-
-    <div class="label">
-      موعد العقيقة
-    </div>
-
-    <div class="value">
-      الخميس 24 سبتمبر 2026
-      <br>
-      الساعة 7:00 مساءً 🕖
-    </div>
-
-  </div>
-
-
-  <!-- العد التنازلي -->
-
-  <div class="box">
-
-    <div class="count-title">
-      متبقي على العقيقة 🤍
-    </div>
-
-    <div class="countdown">
-
-      <div class="count-item">
-        <div class="count-num" id="days">00</div>
-        <div class="count-label">يوم</div>
-      </div>
-
-      <div class="count-item">
-        <div class="count-num" id="hours">00</div>
-        <div class="count-label">ساعة</div>
-      </div>
-
-      <div class="count-item">
-        <div class="count-num" id="minutes">00</div>
-        <div class="count-label">دقيقة</div>
-      </div>
-
-      <div class="count-item">
-        <div class="count-num" id="seconds">00</div>
-        <div class="count-label">ثانية</div>
-      </div>
+        </div>
 
     </div>
 
-  </div>
+
+    <!-- موعد العقيقة -->
+
+    <div class="box">
+
+        <div class="label">
+            موعد العقيقة
+        </div>
+
+        <div class="value">
+
+            الخميس 24 سبتمبر 2026
+
+            <br>
+
+            الساعة 7:00 مساءً 🕖
+
+        </div>
+
+    </div>
 
 
-  <button
-    class="back-btn"
-    onclick="goBack()"
-  >
-    العودة
-  </button>
+    <!-- العد التنازلي -->
+
+    <div class="box">
+
+        <div class="count-title">
+            فاضل على العقيقة 🤍
+        </div>
+
+        <div class="countdown">
+
+            <div class="count-item">
+
+                <div
+                    class="count-num"
+                    id="days"
+                >
+                    00
+                </div>
+
+                <div class="count-label">
+                    يوم
+                </div>
+
+            </div>
+
+
+            <div class="count-item">
+
+                <div
+                    class="count-num"
+                    id="hours"
+                >
+                    00
+                </div>
+
+                <div class="count-label">
+                    ساعة
+                </div>
+
+            </div>
+
+
+            <div class="count-item">
+
+                <div
+                    class="count-num"
+                    id="minutes"
+                >
+                    00
+                </div>
+
+                <div class="count-label">
+                    دقيقة
+                </div>
+
+            </div>
+
+
+            <div class="count-item">
+
+                <div
+                    class="count-num"
+                    id="seconds"
+                >
+                    00
+                </div>
+
+                <div class="count-label">
+                    ثانية
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="back-btn"
+        onclick="goBack()"
+    >
+        العودة
+    </button>
 
 </main>
 
 
 <!-- =========================
-     الموسيقى
+     الأغنية
+     اسم الملف: موسيقى.mp3
 ========================= -->
 
 <audio
-  id="music"
-  loop
-  preload="auto"
+    id="music"
+    loop
+    preload="auto"
 >
-  <source src="mp3.موسيقى" type="audio/mpeg">
+    <source
+        src="./موسيقى.mp3"
+        type="audio/mpeg"
+    >
 </audio>
 
 
+<!-- زر التحكم في الأغنية -->
+
 <button
-  class="music-button"
-  id="musicButton"
-  onclick="toggleMusic()"
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic()"
+    aria-label="تشغيل أو إيقاف الموسيقى"
 >
-  🎵
+    🎵
 </button>
 
 
 <script>
 
-/* ==================================
-   تاريخ العقيقة
+/* =========================================
+   موعد العقيقة
    24 سبتمبر 2026 - الساعة 7 مساءً
-   توقيت القاهرة
-================================== */
+========================================= */
 
-const eventDate = new Date("2026-09-24T19:00:00+03:00").getTime();
+const eventDate =
+    new Date("2026-09-24T19:00:00+03:00").getTime();
 
 
-/* ==================================
+/* =========================================
    العد التنازلي
-================================== */
+========================================= */
 
 function updateCountdown(){
 
-  const now = new Date().getTime();
+    const now = Date.now();
 
-  const difference = eventDate - now;
-
-
-  if(difference <= 0){
-
-    document.getElementById("days").innerText = "00";
-    document.getElementById("hours").innerText = "00";
-    document.getElementById("minutes").innerText = "00";
-    document.getElementById("seconds").innerText = "00";
-
-    return;
-  }
+    const difference = eventDate - now;
 
 
-  const days = Math.floor(
-    difference / (1000 * 60 * 60 * 24)
-  );
+    if(difference <= 0){
+
+        document.getElementById("days").textContent = "00";
+
+        document.getElementById("hours").textContent = "00";
+
+        document.getElementById("minutes").textContent = "00";
+
+        document.getElementById("seconds").textContent = "00";
+
+        return;
+    }
 
 
-  const hours = Math.floor(
-    (difference / (1000 * 60 * 60)) % 24
-  );
+    const days =
+        Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
 
 
-  const minutes = Math.floor(
-    (difference / (1000 * 60)) % 60
-  );
+    const hours =
+        Math.floor(
+            (difference /
+            (1000 * 60 * 60)) % 24
+        );
 
 
-  const seconds = Math.floor(
-    (difference / 1000) % 60
-  );
+    const minutes =
+        Math.floor(
+            (difference /
+            (1000 * 60)) % 60
+        );
 
 
-  document.getElementById("days").innerText =
-    String(days).padStart(2,"0");
+    const seconds =
+        Math.floor(
+            (difference /
+            1000) % 60
+        );
 
 
-  document.getElementById("hours").innerText =
-    String(hours).padStart(2,"0");
+    document.getElementById("days").textContent =
+        String(days).padStart(2,"0");
 
 
-  document.getElementById("minutes").innerText =
-    String(minutes).padStart(2,"0");
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2,"0");
 
 
-  document.getElementById("seconds").innerText =
-    String(seconds).padStart(2,"0");
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2,"0");
+
+
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2,"0");
 }
 
 
@@ -619,64 +554,131 @@ updateCountdown();
 setInterval(updateCountdown,1000);
 
 
-/* ==================================
+/* =========================================
    فتح الدعوة وتشغيل الأغنية
-================================== */
+========================================= */
 
 function openInvitation(){
 
-  document.getElementById("cover").style.display = "none";
+    /* إخفاء الصورة الأولى */
 
-  document.getElementById("invitation").classList.add("show");
+    document.getElementById("cover").style.display =
+        "none";
 
-  document.getElementById("musicButton").classList.add("show");
+
+    /* إظهار الدعوة */
+
+    document
+        .getElementById("invitation")
+        .classList.add("show");
 
 
-  const music = document.getElementById("music");
+    /* إظهار زر الموسيقى */
 
-  music.play()
-    .then(function(){
-      console.log("Music started");
-    })
-    .catch(function(){
-      console.log("Browser blocked autoplay");
-    });
+    document
+        .getElementById("musicButton")
+        .classList.add("show");
 
+
+    /* تشغيل الأغنية */
+
+    const music =
+        document.getElementById("music");
+
+
+    music.volume = 1;
+
+    music.currentTime = 0;
+
+
+    music.play()
+        .then(function(){
+
+            document
+                .getElementById("musicButton")
+                .textContent = "🔊";
+
+        })
+        .catch(function(error){
+
+            console.log(
+                "تعذر تشغيل الأغنية:",
+                error
+            );
+
+        });
 }
 
 
-/* ==================================
+/* =========================================
    تشغيل / إيقاف الأغنية
-================================== */
+========================================= */
 
 function toggleMusic(){
 
-  const music = document.getElementById("music");
+    const music =
+        document.getElementById("music");
 
-  if(music.paused){
 
-    music.play();
+    const button =
+        document.getElementById("musicButton");
 
-  }else{
 
-    music.pause();
+    if(music.paused){
 
-  }
+        music.play()
+            .then(function(){
 
+                button.textContent = "🔊";
+
+            })
+            .catch(function(error){
+
+                console.log(
+                    "تعذر تشغيل الأغنية:",
+                    error
+                );
+
+            });
+
+    }
+
+    else{
+
+        music.pause();
+
+        button.textContent = "🎵";
+
+    }
 }
 
 
-/* ==================================
-   العودة للغلاف
-================================== */
+/* =========================================
+   الرجوع للصورة الأولى
+========================================= */
 
 function goBack(){
 
-  document.getElementById("invitation").classList.remove("show");
+    document
+        .getElementById("invitation")
+        .classList.remove("show");
 
-  document.getElementById("cover").style.display = "flex";
 
-  document.getElementById("musicButton").classList.remove("show");
+    document
+        .getElementById("cover")
+        .style.display = "flex";
+
+
+    document
+        .getElementById("musicButton")
+        .classList.remove("show");
+
+
+    const music =
+        document.getElementById("music");
+
+
+    music.pause();
 
 }
 
