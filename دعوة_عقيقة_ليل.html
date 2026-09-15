@@ -11,17 +11,32 @@
 .hero{position:relative}
 .hero img{display:block;width:100%;height:auto}
 .open{position:absolute;left:50%;bottom:9.5%;transform:translateX(-50%);width:70%;height:58px;border:0;border-radius:32px;background:#ad7d82;color:white;font-size:22px;font-weight:700;box-shadow:0 7px 18px #7c555544;cursor:pointer}
-.details{display:none;padding:34px 24px 42px;text-align:center;background:linear-gradient(#fffaf7,#f7ebe6)}
+.details{display:none;position:relative;padding:44px 24px 42px;text-align:center;overflow:hidden;
+  background:
+    radial-gradient(circle at 15% 12%, #ffffffaa 0 3px, transparent 4px),
+    radial-gradient(circle at 85% 20%, #ffffffaa 0 3px, transparent 4px),
+    radial-gradient(circle at 25% 85%, #ffffffaa 0 3px, transparent 4px),
+    radial-gradient(circle at 75% 90%, #ffffffaa 0 3px, transparent 4px),
+    linear-gradient(160deg,#f7e3df,#fbeee9 40%,#f3e6dd 100%)}
 .details.show{display:block;animation:up .7s ease}
 @keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-h1{margin:0 0 8px;font-size:32px} .date{font-size:21px;margin:12px 0 24px}
-.box{background:white;border-radius:20px;padding:18px;margin:12px 0;box-shadow:0 5px 18px #8b6d5b18}
+.ornament{font-size:26px;letter-spacing:10px;color:#c79b95;margin-bottom:6px}
+.ribbon{display:inline-block;background:#ad7d82;color:#fff;font-size:13px;padding:6px 18px;border-radius:30px;letter-spacing:1px;margin-bottom:14px}
+h1{margin:0 0 8px;font-size:34px;color:#7c4f4f;text-shadow:0 1px 0 #fff} .date{font-size:21px;margin:12px 0 24px}
+.box{background:#ffffffee;border-radius:20px;padding:18px;margin:12px 0;box-shadow:0 5px 18px #8b6d5b18;border:1px solid #f0d9d3}
 .label{font-size:13px;opacity:.65;margin-bottom:5px} .value{font-size:20px;font-weight:700}
+.map-btn{display:inline-block;margin-top:10px;background:#f7e3df;color:#7c4f4f;font-size:14px;font-weight:700;text-decoration:none;padding:8px 18px;border-radius:20px;border:1px solid #e2bdb5}
 .quote{line-height:2;font-size:17px;margin:25px 0}
 .footer{margin-top:28px;font-size:14px;opacity:.7}
+.music-badge{position:fixed;top:16px;left:16px;width:42px;height:42px;border-radius:50%;background:#ad7d82;color:#fff;display:none;align-items:center;justify-content:center;font-size:20px;box-shadow:0 4px 12px #0003;z-index:20;border:0;cursor:pointer}
+.music-badge.show{display:flex}
+.music-badge.spin{animation:spin 3s linear infinite}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
+<audio id="bgMusic" src="music.mp3" loop preload="none"></audio>
+<button class="music-badge" id="musicBadge" onclick="toggleMusic()">🎵</button>
 <div class="screen">
 <div class="card">
 <div class="hero">
@@ -29,9 +44,13 @@ h1{margin:0 0 8px;font-size:32px} .date{font-size:21px;margin:12px 0 24px}
 <button class="open" onclick="openInvite()">افتح الدعوة</button>
 </div>
 <div id="details" class="details">
+<div class="ornament">❀ ❀ ❀</div>
+<div class="ribbon">دعوة عقيقة</div>
 <h1>عقيقة ليل 🤍</h1>
 <div class="date">24 سبتمبر 2026 · الساعة 7 مساءً</div>
-<div class="box"><div class="label">المكان</div><div class="value">المرج القديمة – إبراهيم الجزار – ملعب أسد</div></div>
+<div class="box"><div class="label">المكان</div><div class="value">المرج القديمة – إبراهيم الجزار – ملعب أسد</div>
+<a class="map-btn" href="https://maps.app.goo.gl/f6X3cGpVPycuB1Ui8" target="_blank" rel="noopener">📍 افتح الموقع على الخريطة</a>
+</div>
 <div class="box"><div class="label">الدعوة</div>
 <div class="quote">بسم الله الرحمن الرحيم<br>
 «المال والبنون زينة الحياة الدنيا والباقيات الصالحات خير عند ربك ثواباً وخير»<br><br>
@@ -47,6 +66,21 @@ function openInvite(){
   const d=document.getElementById('details');
   d.classList.add('show');
   window.scrollTo({top:0,behavior:'smooth'});
+
+  const audio=document.getElementById('bgMusic');
+  const badge=document.getElementById('musicBadge');
+  audio.play().then(()=>{
+    badge.classList.add('show','spin');
+  }).catch(()=>{
+    // بعض المتصفحات بتمنع التشغيل التلقائي، فهيظهر الزرار عشان المستخدم يدوس عليه
+    badge.classList.add('show');
+  });
+}
+function toggleMusic(){
+  const audio=document.getElementById('bgMusic');
+  const badge=document.getElementById('musicBadge');
+  if(audio.paused){audio.play();badge.classList.add('spin');}
+  else{audio.pause();badge.classList.remove('spin');}
 }
 </script>
 </body>
