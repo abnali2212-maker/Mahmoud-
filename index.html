@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>دعوة عقيقة ليل</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5ebe5;color:#65494b;font-family:Tahoma,Arial,sans-serif}
+.cover{height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.cover-image{width:100%;height:100%;max-width:520px;object-fit:cover}
+.open-btn{position:absolute;bottom:9%;left:50%;transform:translateX(-50%);width:72%;max-width:330px;padding:17px;border:0;border-radius:50px;background:#a9787d;color:#fff;font-size:21px;font-weight:bold;box-shadow:0 8px 22px #50323f40;cursor:pointer}
+.invitation{display:none;max-width:520px;margin:auto;padding:45px 20px 55px;text-align:center;background:linear-gradient(#fffaf7,#f7ebe6);min-height:100vh}
+.invitation.show{display:block;animation:fade .7s ease}@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.ornament{font-size:26px;margin-bottom:8px}h1{margin:0;font-size:38px;color:#8b6267}.subtitle{margin:8px 0 30px;font-size:18px}
+.box{background:#ffffffd1;border-radius:22px;padding:20px 18px;margin:14px 0;box-shadow:0 6px 20px #5a3c3714}
+.label{font-size:13px;color:#9a7c7e;margin-bottom:7px}.value{font-size:20px;line-height:1.7;font-weight:bold}.quran{line-height:2.15;font-size:17px}
+.welcome{margin:28px 0 18px;font-size:20px;font-weight:bold;color:#8b6267}.back-btn{margin-top:20px;border:1px solid #c6a5a7;background:transparent;color:#8b6267;border-radius:30px;padding:11px 24px;font-size:15px}
+</style>
+</head>
+<body>
+<section class="cover" id="cover">
+<img class="cover-image" src="invitation.png" alt="دعوة عقيقة ليل">
+<button class="open-btn" onclick="openInvitation()">افتح الدعوة</button>
+</section>
+<main class="invitation" id="invitation">
+<div class="ornament">⚜️ بسم الله الرحمن الرحيم ⚜️</div>
+<h1>ليل 🤍</h1><div class="subtitle">دعوة عقيقة</div>
+<div class="welcome">بسم الله ما شاء الله، فرحتنا بعقيقتنا تكتمل بوجودكم 🤍</div>
+<div class="box"><div class="label">التاريخ والوقت</div><div class="value">24 سبتمبر 2026<br>الساعة 7 مساءً</div></div>
+<div class="box"><div class="label">المكان</div><div class="value">المرج القديمة<br>إبراهيم الجزار<br>ملعب أسد</div></div>
+<div class="box"><div class="quran">«المال والبنون زينة الحياة الدنيا والباقيات الصالحات خير عند ربك ثواباً وخير»<br><br>اللهم أنبتها نباتاً حسناً 🙌🏻<br>واجعلها من الصالحين الذاكرين الحافظين لكتاب الله والبارّة بوالديها، واجعلها من السعداء في الدنيا والآخرة.</div></div>
+<div class="welcome">وجودكم يسعدنا ويكمل فرحتنا 🤍</div>
+<button class="back-btn" onclick="backToCover()">العودة</button>
+</main>
+<script>
+function openInvitation(){document.getElementById("cover").style.display="none";document.getElementById("invitation").classList.add("show");window.scrollTo(0,0)}
+function backToCover(){document.getElementById("invitation").classList.remove("show");document.getElementById("cover").style.display="flex";window.scrollTo(0,0)}
+</script>
+</body>
+</html>
