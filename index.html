@@ -73,4 +73,435 @@ body{
   border-radius:50%;
   background:
     radial-gradient(circle at 50% 42%,#f7d5c5 0 20%,transparent 21%),
-    radial-gradient
+    radial-gradient(circle at 50% 58%,#e5bfae 0 34%,transparent 35%),
+    linear-gradient(145deg,#fff8f4,#ddc0b5);
+  box-shadow:0 15px 40px #9a796655;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:75px;
+}
+
+.open-btn{
+  border:0;
+  background:#9c756a;
+  color:white;
+  padding:16px 45px;
+  border-radius:40px;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 8px 20px #80605755;
+  transition:.3s;
+}
+
+.open-btn:active{
+  transform:scale(.95);
+}
+
+/* التفاصيل */
+#details{
+  display:none;
+  min-height:100vh;
+  padding:35px 18px;
+  background:
+    radial-gradient(circle at 10% 10%,#f8ddd9,transparent 30%),
+    radial-gradient(circle at 90% 90%,#ead5c9,transparent 35%),
+    #f6eee9;
+}
+
+.card{
+  width:100%;
+  max-width:470px;
+  margin:auto;
+  background:#fffaf7dd;
+  border:1px solid #dec9c0;
+  border-radius:30px;
+  padding:30px 20px;
+  text-align:center;
+  box-shadow:0 15px 45px #80605725;
+}
+
+.ornament{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.small-title{
+  font-size:17px;
+  color:#92766c;
+  margin-bottom:8px;
+}
+
+.main-title{
+  font-size:31px;
+  color:#624b43;
+  margin-bottom:8px;
+}
+
+.name{
+  font-size:27px;
+  color:#a06f63;
+  font-weight:bold;
+  margin-bottom:25px;
+}
+
+.divider{
+  width:80px;
+  height:2px;
+  background:#c9a89c;
+  margin:20px auto;
+}
+
+.dua{
+  font-size:16px;
+  line-height:2.1;
+  color:#715b53;
+}
+
+.info{
+  margin-top:25px;
+}
+
+.info-box{
+  background:#f5e8e2;
+  border-radius:20px;
+  padding:15px;
+  margin:10px 0;
+  font-size:17px;
+  line-height:1.8;
+}
+
+.info-box b{
+  color:#795c53;
+}
+
+.count-title{
+  margin-top:25px;
+  font-size:17px;
+}
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:7px;
+  margin-top:12px;
+}
+
+.time{
+  background:#9c756a;
+  color:white;
+  border-radius:15px;
+  padding:12px 3px;
+}
+
+.time strong{
+  display:block;
+  font-size:23px;
+}
+
+.time span{
+  font-size:11px;
+}
+
+.buttons{
+  margin-top:25px;
+  display:grid;
+  gap:12px;
+}
+
+.btn{
+  display:block;
+  text-decoration:none;
+  padding:15px;
+  border-radius:18px;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+}
+
+.map{
+  background:#9c756a;
+}
+
+.whatsapp{
+  background:#6c9b79;
+}
+
+.music-btn{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  width:50px;
+  height:50px;
+  border:0;
+  border-radius:50%;
+  background:#9c756a;
+  color:white;
+  font-size:22px;
+  z-index:20;
+  display:none;
+}
+
+.footer{
+  margin-top:25px;
+  color:#9b8279;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- الصفحة الأولى -->
+<section id="cover" class="page">
+
+  <div class="cover-content">
+
+    <div class="flower">🌸</div>
+
+    <div class="cover-title">
+      بسم الله ما شاء الله،<br>
+      فرحتنا بعقيقتنا تكتمل بوجودكم 🤍
+    </div>
+
+    <div class="cover-sub">
+      بكل الحب ندعوكم لمشاركتنا<br>
+      فرحتنا الصغيرة الجميلة
+    </div>
+
+    <div class="baby">🧸</div>
+
+    <button class="open-btn" onclick="openInvitation()">
+      افتح الدعوة
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- صفحة التفاصيل -->
+<section id="details">
+
+  <div class="card">
+
+    <div class="ornament">🌸 🤍 🌸</div>
+
+    <div class="small-title">
+      بسم الله الرحمن الرحيم
+    </div>
+
+    <div class="main-title">
+      عقيقة ابنتنا
+    </div>
+
+    <div class="name">
+      ليل محمود 🤍
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="dua">
+      <b>
+        ﴿ الْمَالُ وَالْبَنُونَ زِينَةُ الْحَيَاةِ الدُّنْيَا
+        وَالْبَاقِيَاتُ الصَّالِحَاتُ خَيْرٌ عِندَ رَبِّكَ
+        ثَوَابًا وَخَيْرٌ ﴾
+      </b>
+      <br><br>
+
+      اللهم أنبتها نباتًا حسنًا، واجعلها من الصالحات
+      الذاكرات الحافظات لكتاب الله، والبارّة بوالديها،
+      واجعلها من السعداء في الدنيا والآخرة 🤍
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="info">
+
+      <div class="info-box">
+        📅<br>
+        <b>الخميس 24 سبتمبر 2026</b>
+      </div>
+
+      <div class="info-box">
+        🕖<br>
+        <b>الساعة 7 مساءً</b>
+      </div>
+
+      <div class="info-box">
+        📍<br>
+        <b>المرج القديمة<br>
+        إبراهيم الجزار<br>
+        ملعب أسد</b>
+      </div>
+
+    </div>
+
+
+    <div class="count-title">
+      ⏳ باقي على العقيقة
+    </div>
+
+    <div class="countdown">
+
+      <div class="time">
+        <strong id="days">0</strong>
+        <span>يوم</span>
+      </div>
+
+      <div class="time">
+        <strong id="hours">0</strong>
+        <span>ساعة</span>
+      </div>
+
+      <div class="time">
+        <strong id="minutes">0</strong>
+        <span>دقيقة</span>
+      </div>
+
+      <div class="time">
+        <strong id="seconds">0</strong>
+        <span>ثانية</span>
+      </div>
+
+    </div>
+
+
+    <div class="buttons">
+
+      <a
+        class="btn map"
+        href="https://www.google.com/maps/search/?api=1&query=المرج+القديمة+إبراهيم+الجزار+ملعب+أسد"
+        target="_blank">
+        📍 افتح الموقع
+      </a>
+
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/201021279988?text=السلام%20عليكم،%20أؤكد%20حضوري%20في%20عقيقة%20ليل%20محمود%20🤍"
+        target="_blank">
+        💬 تأكيد الحضور
+      </a>
+
+    </div>
+
+    <div class="footer">
+      وجودكم هو أجمل ما يكمّل فرحتنا 🤍
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- زر الموسيقى -->
+<button id="musicBtn" class="music-btn" onclick="toggleMusic()">
+  🔊
+</button>
+
+
+<!-- الأغنية -->
+<audio id="music" loop preload="auto">
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+const music = document.getElementById("music");
+
+function openInvitation(){
+
+  document.getElementById("cover").style.opacity = "0";
+
+  setTimeout(function(){
+
+    document.getElementById("cover").style.display = "none";
+    document.getElementById("details").style.display = "block";
+    document.getElementById("musicBtn").style.display = "block";
+
+    // تشغيل الأغنية مباشرة بعد ضغط الزائر
+    music.play().catch(function(error){
+      console.log("Music blocked:", error);
+    });
+
+  },700);
+}
+
+
+function toggleMusic(){
+
+  if(music.paused){
+
+    music.play();
+
+    document.getElementById("musicBtn").innerHTML = "🔊";
+
+  }else{
+
+    music.pause();
+
+    document.getElementById("musicBtn").innerHTML = "🔇";
+
+  }
+
+}
+
+
+/* العد التنازلي */
+
+const targetDate =
+  new Date("2026-09-24T19:00:00+03:00").getTime();
+
+function countdown(){
+
+  const now = new Date().getTime();
+
+  const distance = targetDate - now;
+
+  if(distance <= 0){
+
+    document.getElementById("days").innerHTML = "0";
+    document.getElementById("hours").innerHTML = "0";
+    document.getElementById("minutes").innerHTML = "0";
+    document.getElementById("seconds").innerHTML = "0";
+
+    return;
+  }
+
+  const days =
+    Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  const hours =
+    Math.floor(
+      (distance % (1000 * 60 * 60 * 24))
+      / (1000 * 60 * 60)
+    );
+
+  const minutes =
+    Math.floor(
+      (distance % (1000 * 60 * 60))
+      / (1000 * 60)
+    );
+
+  const seconds =
+    Math.floor(
+      (distance % (1000 * 60))
+      / 1000
+    );
+
+  document.getElementById("days").innerHTML = days;
+  document.getElementById("hours").innerHTML = hours;
+  document.getElementById("minutes").innerHTML = minutes;
+  document.getElementById("seconds").innerHTML = seconds;
+}
+
+countdown();
+
+setInterval(countdown,1000);
+
+</script>
+
+</body>
+</html>
